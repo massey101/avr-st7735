@@ -3,15 +3,38 @@ ST7735 for AVR
 
 ![example of working display](./images/example.jpg)
 
-My simplified plain C version of https://github.com/adafruit/Adafruit-ST7735-Library
+A simplified plain C version of https://github.com/adafruit/Adafruit-ST7735-Library
 and parts of https://github.com/adafruit/Adafruit-GFX-Library/
+
+This library is based on https://github.com/LongHairedHacker/avr-st7735 by
+LongHairedHacker.
 
 *Use at your own risk!*
 
+
 Tweaks
 ------
+
+By LongHairedHacker:
 
 * Uses my own bitmap format for fullcolor and monochrome bitmaps
 * Faster line drawing based on: https://github.com/adafruit/Adafruit-GFX-Library/pull/36
 * Faster font rendering based on https://github.com/adafruit/Adafruit-GFX-Library/issues/69
 * Refactored draw_char function that does not load glyph struct twice
+
+By Massey101:
+
+* Added support for bitmap clipping
+* Added JAYCAR screen for XC4629 support
+
+
+Usage
+-----
+
+1. Set the environment variables for:
+  - `AVRMCU` - Your avr chip
+  - `F_CPU` - Your clock speed
+  - `ISPPORT` - programming device
+2. Modify `include/st7735.h:st7735_type` to your screen. (I have no idea how to
+   figure out which is which)
+3. Run `make flash`
