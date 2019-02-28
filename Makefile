@@ -1,6 +1,6 @@
 AVRMCU ?= atmega328
 F_CPU ?= 8000000
-ISPPORT ?= /dev/kaboard
+ISPPORT ?= /dev/ttyACM0
 
 VERSION = 0.2
 
@@ -61,7 +61,7 @@ clean :
 	@rm images/*.h
 
 flash : all
-	avrdude -c arduino \
+	avrdude -c avrispmkII \
 		-p $(AVRMCU) -P $(ISPPORT) \
         -U flash:w:$(OBJDIR)/$(AVRMCU)/$(TARGET).hex
 
