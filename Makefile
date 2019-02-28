@@ -1,5 +1,5 @@
-AVRMCU ?= atmega8
-F_CPU ?= 16000000
+AVRMCU ?= atmega328
+F_CPU ?= 8000000
 ISPPORT ?= /dev/kaboard
 
 VERSION = 0.2
