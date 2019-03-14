@@ -31,6 +31,30 @@ By Massey101:
 Usage
 -----
 
+Connect the display to the following PINS:
+
+ATMEGA328:
++--------+--------+
+| Screen | AVR    |
++--------+--------+
+| VCC    | 5V     |
++--------+--------+
+| GND    | GND    |
++--------+--------+
+| CS     | PB2    |
++--------+--------+
+| RESET  | PD7    |
++--------+--------+
+| A0     | PD6    |
++--------+--------+
+| SDA    | PB3    |
++--------+--------+
+| SCK    | PB5    |
++--------+--------+
+| LED    | 3.3V   |
++--------+--------+
+
+
 1. Set the environment variables for:
   - `AVRMCU` - Your avr chip
   - `F_CPU` - Your clock speed
