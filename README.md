@@ -33,7 +33,7 @@ Usage
 
 Connect the display to the following PINS:
 
-ATMEGA328:
+JAYCAR screen and ATMEGA328:
 +--------+--------+
 | Screen | AVR    |
 +--------+--------+

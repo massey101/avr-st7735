@@ -7,5 +7,5 @@ void spi_init(void) {
     SPCR = (1<<SPE) | (1<<MSTR);
 
     // Set SS/CS
-    PORTB |= (1 << PB2) | (1 << PB0);
+    PORTB |= (1 << PB2);
 }
